@@ -437,7 +437,7 @@ Let's say we capture this data into a file, we can eventually capture the mouse 
 
 ::
 
- tshark -r challenge.pcapng usb.capdata and usb.device_address==12 -T fields -e usb.capdata > mouse_data.txt
+ tshark -r challenge.pcapng -T fields -e usb.capdata usb.capdata and usb.device_address==12 > mouse_data.txt
 
 This can be plotted using GNUplot as shown in a writeup of `Riverside <https://github.com/ctfs/write-ups-2015/tree/master/boston-key-party-2015/school-bus/riverside>`_
 
